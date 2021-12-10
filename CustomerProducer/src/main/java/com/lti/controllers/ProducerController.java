@@ -32,6 +32,7 @@ public class ProducerController {
 
 	@PostMapping("/customer")
 	public Customer_Bank PostCustomer(@RequestBody Customer_Bank customer) {
+		logger.info("****************Contrller Class :Post customers****************");
 		return ProductService.PostCustomer(customer);
 
 	}

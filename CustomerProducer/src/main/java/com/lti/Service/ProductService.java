@@ -18,7 +18,7 @@ import com.lti.model.Customer_Bank;
 @Service
 @Transactional
 public class ProductService {
-	private static final Logger logger = LoggerFactory.getLogger(ProducerController.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProductService.class);
 
 	@Autowired
 	private CustomerRepository custrep;
@@ -34,7 +34,6 @@ public class ProductService {
 	}
 
 	public Customer_Bank getCustomersByID(int custid) throws ResourceNotFoundException {
-		// TODO Auto-generated method stub
 		Customer_Bank cust = custrep.findById(custid)
 				.orElseThrow(() -> new ResourceNotFoundException("product not found for this id :: " + custid));
 
